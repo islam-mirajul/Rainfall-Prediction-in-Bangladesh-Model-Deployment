@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>Rainfall Predictor</title>
+    </head>
+
+    <body>
+
+        <!-- Website Title -->
+    	<div class="container" align="center" style="background-color:GreenYellow;">
+            <h2 class='container-heading'>BD Rainfall Predictor</h2>
+            <div class='description' align="center">
+    			<p>Machine Learning Web App Built with Flask</p>
+    			<p>This model is 82% accurate</p>
+    		</div>
+    	</div>
+
+        <!-- Text Area -->
+    	<div class="ml-container" align="center">
+    		<form action="{{ url_for('predict') }}" method="POST">
+                <input class="form-input" type="text" name="max_temp" placeholder="Maximum Temperature" required="required" ><br>
+                <br/>
+                <input class="form-input" type="text" name="min_temp" placeholder="Minimum Temperature" required="required" ><br>
+                <br/>
+                <input class="form-input" type="text" name="actual_evaporation" placeholder="Actual Evaporation" required="required" ><br>
+                <br/>
+                <input class="form-input" type="text" name="relative_humidity(9.00am)" placeholder="Relative humidity(9.00am)" required="required" ><br>
+                <br/>
+                <input class="form-input" type="text" name="relative_humidity(2.00pm)" placeholder="Relative humidity(2.00 pm)" required="required" ><br>
+                <br/>
+                <input class="form-input" type="text" name="sunshine" placeholder="Sunshine(hrs/day)" required="required" ><br>
+                <br/>
+                <input class="form-input" type="text" name="cloudy" placeholder="Cloudy(hrs/day)" required="required" ><br>
+                <br/>
+                <input class="form-input" type="text" name="solar_radiation" placeholder="Solar Radiation(cal/cm2)" required="required" ><br>
+                 <br/>
+                 <br/>
+        		<input type="submit" class="my-cta-button" value="Predict">
+        	</form>
+    	</div>
+
+        <!-- Footer -->
+       <div class='footer' align="center">
+         <footer>
+        <p>Mirajul Islam</p>
+        </footer>
+       </div>
+
+    </body>
+</html>
